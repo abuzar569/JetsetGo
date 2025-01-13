@@ -78,14 +78,14 @@ const Header = () => {
 
   return (
     <>
-      <div className="fixed inset-0 pointer-events-none z-50">
+      <div className="fixed inset-0 pointer-events-none font-League z-50">
         <div ref={logoRef} className="absolute top-4 left-4 pointer-events-auto">
           <Logo />
         </div>
         <button
           ref={toggleRef}
           onClick={handleToggle}
-          className="absolute top-1/2 right-4 -translate-y-1/2 bg-primary text-primary-foreground rounded-full p-2 pointer-events-auto z-50 transition-colors hover:bg-primary/90"
+          className="absolute top-1/2 right-4 -translate-y-1/2 bg-primary text-primary-foreground rounded-full p-4 pointer-events-auto bg-black z-50 transition-colors hover:bg-primary/90"
           aria-label={isOpen ? 'Close menu' : 'Open menu'}
         >
           {isOpen ? <XIcon size={24} /> : <MenuIcon size={24} />}
@@ -93,22 +93,22 @@ const Header = () => {
       </div>
       <div
         ref={overlayRef}
-        className="fixed inset-0 bg-black pointer-events-none"
+        className="fixed inset-0 bg-black z-20 pointer-events-none"
         aria-hidden="true"
       />
       <div
         ref={menuRef}
-        className="fixed top-0 right-0 w-1/2 h-full bg-gradient-to-br from-primary to-primary-dark text-primary-foreground p-8 overflow-y-auto shadow-2xl z-50"
+        className="fixed top-0 right-0 w-3/5 sm:w-1/2 h-full bg-gradient-to-br from-primary to-primary-dark text-primary-foreground p-8 overflow-y-auto shadow-2xl bg-black  z-30"
       >
-        <button
+        {/* <button
           onClick={handleToggle}
           className="absolute top-4 right-4 bg-primary-light text-primary-foreground rounded-full p-2 transition-colors hover:bg-primary-light/90"
           aria-label="Close menu"
         >
           <XIcon size={24} />
-        </button>
-        <nav className="mt-16">
-          <ul className="space-y-4">
+        </button> */}
+        <nav className="mt-28 font-League">
+          <ul className="space-y-6">
             {['Home', 'About', 'Services', 'Contact', 'Blog'].map((item, index) => (
               <MenuLink key={item} href={`/${item.toLowerCase()}`} index={index} ref={(el) => (linksRef.current[index] = el)}>
                 {item}
@@ -122,8 +122,8 @@ const Header = () => {
 }
 
 const Logo = () => (
-  <div className="bg-primary text-primary-foreground font-bold text-xl p-2 rounded transition-transform hover:scale-110">
-    Logo
+  <div className="bg-primary text-primary-foreground font-bold text-3xl p-2 rounded transition-transform hover:scale-110">
+    Jetset-Go
   </div>
 )
 

@@ -11,6 +11,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        Soria: ["var(--font-Soria)"],
+        League:["var(--font-League)"]
+      }
     },
   },
   plugins: [],

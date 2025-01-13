@@ -1,14 +1,17 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const Soria = localFont({
+  src: "./fonts/soria-font.ttf",
+  variable: "--font-Soria",
+  weight:"100-900",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const League = localFont({
+  src:"./fonts/LeagueSpartan-VF.ttf",
+  variable: "--font-League",
+  weight:"100-900",
 });
 
 export const metadata = {
@@ -20,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${Soria.variable} ${League.variable} antialiased`}
       >
         {children}
       </body>

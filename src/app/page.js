@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       <AnimatedHero />
       {/* <Showcase /> */}
       {/* <Trevelcard /> */}

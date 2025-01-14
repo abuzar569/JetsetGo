@@ -78,7 +78,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="fixed inset-0 pointer-events-none font-League z-50">
+      <div className="fixed inset-0 pointer-events-none  text-white  font-League z-50">
         <div ref={logoRef} className="absolute top-4 left-4 pointer-events-auto">
           <Logo />
         </div>
@@ -98,7 +98,7 @@ const Header = () => {
       />
       <div
         ref={menuRef}
-        className="fixed top-0 right-0 w-3/5 sm:w-1/2 h-full bg-gradient-to-br from-primary to-primary-dark text-primary-foreground p-8 overflow-y-auto shadow-2xl bg-black  z-30"
+        className="fixed top-0 right-0 w-screen sm:w-1/2 h-full bg-gradient-to-br from-primary to-primary-dark text-primary-foreground p-8 overflow-y-auto shadow-2xl bg-black  z-30"
       >
         {/* <button
           onClick={handleToggle}
@@ -108,7 +108,7 @@ const Header = () => {
           <XIcon size={24} />
         </button> */}
         <nav className="mt-28 font-League">
-          <ul className="space-y-6">
+          <ul className="space-y-6 text-white">
             {['Home', 'About', 'Services', 'Contact', 'Blog'].map((item, index) => (
               <MenuLink key={item} href={`/${item.toLowerCase()}`} index={index} ref={(el) => (linksRef.current[index] = el)}>
                 {item}

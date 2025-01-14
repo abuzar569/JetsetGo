@@ -14,13 +14,13 @@ const heroContent = [
     buttonText: 'Start Exploring'
   },
   {
-    video: './trevel2.mp4', // Replace with your video link
+    video: './trevel2.mp4',
     title: 'Embrace the Adventure',
     description: 'Push your limits and create unforgettable memories',
     buttonText: 'Plan Your Trip'
   },
   {
-    video: './trevel1.mp4', // Replace with your video link
+    video: './trevel1.mp4', 
     title: 'Connect with Nature',
     description: 'Find peace and inspiration in the great outdoors',
     buttonText: 'Discover More'
@@ -33,6 +33,24 @@ export default function AnimatedHero() {
   const contentRefs = useRef([])
 
   useEffect(() => {
+    // Initialize videos with proper attributes for mobile autoplay
+    videosRef.current.forEach((videoContainer) => {
+      const videoElement = videoContainer.querySelector('video')
+      if (videoElement) {
+        // Set playsinline attribute for iOS
+        videoElement.setAttribute('playsinline', '')
+        // Force play on mobile devices
+        const playPromise = videoElement.play()
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            // Auto-play was prevented
+            // Show a UI element to let the user manually start playback
+            console.log("Autoplay prevented")
+          })
+        }
+      }
+    })
+
     const hero = heroRef.current
     const videos = videosRef.current
     const contents = contentRefs.current
@@ -99,6 +117,19 @@ export default function AnimatedHero() {
     }
   }, [])
 
+  const handleVideoClick = (videoSrc) => {
+    // Create a new window/tab with the video and controls
+    const width = 800
+    const height = 600
+    const left = (window.screen.width - width) / 2
+    const top = (window.screen.height - height) / 2
+    window.open(
+      videoSrc,
+      '_blank',
+      `width=${width},height=${height},left=${left},top=${top}`
+    )
+  }
+
   return (
     <div ref={heroRef} className="relative h-screen font-League overflow-hidden bg-black">
       {heroContent.map((content, index) => (
@@ -113,7 +144,9 @@ export default function AnimatedHero() {
               autoPlay
               loop
               muted
-              className="object-cover w-full h-full"
+              playsInline
+              onClick={() => handleVideoClick(content.video)}
+              className="object-cover w-full h-full pointer-events-none md:pointer-events-auto cursor-pointer"
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/20 z-10"></div>

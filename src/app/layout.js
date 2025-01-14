@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local";
+import Loading from "./Components/Loding";
 
 const Soria = localFont({
   src: "./fonts/soria-font.ttf",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${Soria.variable} ${League.variable} antialiased`}
       >
+        {/* <Loading /> */}
         {children}
       </body>
     </html>

@@ -1,5 +1,5 @@
 'use client';
-
+import Image from "next/image";
 import { useRef } from 'react';
 import Header from './Components/Header';
 import AnimatedHero from './Components/Hero';
@@ -14,7 +14,7 @@ export default function Home() {
       <Header />
       <AnimatedHero />
       {/* <Showcase /> */}
-      {/* <Trevelcard /> */}
+      <Trevelcard />
     </div>
   );
 }

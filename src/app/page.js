@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useRef } from 'react';
 import Header from './Components/Header';
 import AnimatedHero from './Components/Hero';
-import Showcase from './Components/Showcase';
 import Trevelcard from './Components/Trevelcard';
 
 export default function Home() {
@@ -11,9 +10,8 @@ export default function Home() {
 
   return (
     <div>
-      <Header />
-      <AnimatedHero />
-      {/* <Showcase /> */}
+      {/* <Header />
+      <AnimatedHero /> */}
       <Trevelcard />
     </div>
   );

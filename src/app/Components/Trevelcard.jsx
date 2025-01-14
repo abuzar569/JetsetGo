@@ -248,7 +248,7 @@ const TravelCard = () => {
       <div ref={dubaiRef} className="w-11/12 mt-20 mx-auto overflow-hidden">
         <div className='w-full sticky top-0'>
           <div
-            className="image-container h-screen w-2/4 transform-gpu"
+            className="image-container h-screen w-full sm:w-2/4 transform-gpu"
             style={{
               backgroundImage: `url(${Dubai.src})`,
               backgroundPosition: "center",
@@ -257,7 +257,7 @@ const TravelCard = () => {
           >
           </div>
         </div>
-        <div className='content-container ml-auto w-5/12 mr-12 flex items-end text-justify' style={{ visibility: "hidden" }}>
+        <div className='content-container ml-auto w-full md:w-5/12 mr-36 flex items-end text-justify' style={{ visibility: "hidden" }}>
           <div>
             <h1 className='text-8xl mb-8'>Dubai</h1>
             <h3 className='text-xl mb-8'>"Dubai, the crown jewel of the UAE, is a city of unparalleled luxury, innovation, and culture.
@@ -277,7 +277,7 @@ Experience the thrill of desert safaris, dune bashing, and camel rides in the go
         {/* Tokyo section content - same structure as Dubai */}
         <div className='w-full sticky top-0'>
           <div
-            className="image-container h-screen w-2/4 transform-gpu"
+            className="image-container h-screen w-full sm:w-2/4 transform-gpu"
             style={{
               backgroundImage: `url(${Tokyo.src})`,
               backgroundPosition: "center",
@@ -286,7 +286,7 @@ Experience the thrill of desert safaris, dune bashing, and camel rides in the go
           >
           </div>
         </div>
-        <div className='content-container ml-auto w-5/12 mr-12 flex items-end text-justify' style={{ visibility: "hidden" }}>
+        <div className='content-container ml-auto w-full md:w-5/12 mr-36 flex items-end text-justify' style={{ visibility: "hidden" }}>
           <div>
             <h1 className='text-8xl mb-8'>Tokyo</h1>
             <h3 className='text-xl mb-8'>"Tokyo, Japan's bustling capital, is a city that seamlessly blends ancient traditions with modern marvels.
@@ -305,7 +305,7 @@ Shop at Ginza's luxury boutiques or uncover unique treasures in Harajuku's quirk
         {/* Bali section content - same structure as Dubai */}
         <div className='w-full sticky top-0'>
           <div
-            className="image-container h-screen w-2/4 transform-gpu"
+            className="image-container h-screen w-full sm:w-2/4 transform-gpu "
             style={{
               backgroundImage: `url(${Bali.src})`,
               backgroundPosition: "center",
@@ -314,7 +314,7 @@ Shop at Ginza's luxury boutiques or uncover unique treasures in Harajuku's quirk
           >
           </div>
         </div>
-        <div className='content-container ml-auto w-5/12 mr-12 flex items-end text-justify' style={{ visibility: "hidden" }}>
+        <div className='content-container ml-auto w-full md:w-5/12 mr-36 flex items-end text-justify' style={{ visibility: "hidden" }}>
           <div>
             <h1 className='text-8xl mb-8'>Bali</h1>
             <h3 className='text-xl mb-8'>"Bali, the Island of the Gods, is a tropical paradise known for its lush landscapes and serene spirituality.
@@ -327,6 +327,9 @@ Immerse yourself in Bali's vibrant culture with traditional dance performances a
             </Link>
           </div>
         </div>
+      </div>
+      <div className=' mt-10 w-40 text-white mx-auto text-2xl text-center'>
+        <h1 className=' border-2 p-2'>Show more</h1>
       </div>
     </div>
   );

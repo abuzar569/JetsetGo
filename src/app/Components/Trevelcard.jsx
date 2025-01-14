@@ -244,7 +244,7 @@ const TravelCard = () => {
   }, []);
 
   return (
-    <div className="relative font-League h-[200vh]">
+    <div className=" font-League text-white bg-black">
       <div ref={dubaiRef} className="w-11/12 mt-20 mx-auto overflow-hidden">
         <div className='w-full sticky top-0'>
           <div
@@ -273,7 +273,7 @@ Experience the thrill of desert safaris, dune bashing, and camel rides in the go
       </div>
 
       {/* Tokyo and Bali sections follow the same pattern - repeated for each section */}
-      <div ref={tokyoRef} className="w-11/12 mt-20 mx-auto overflow-hidden">
+      <div ref={tokyoRef} className="w-11/12 mt-20  text-white bg-black mx-auto overflow-hidden">
         {/* Tokyo section content - same structure as Dubai */}
         <div className='w-full sticky top-0'>
           <div
@@ -301,7 +301,7 @@ Shop at Ginza's luxury boutiques or uncover unique treasures in Harajuku's quirk
         </div>
       </div>
 
-      <div ref={baliRef} className="w-11/12 mt-20 mx-auto overflow-hidden">
+      <div ref={baliRef} className="w-11/12 mt-20  text-white bg-black mx-auto overflow-hidden">
         {/* Bali section content - same structure as Dubai */}
         <div className='w-full sticky top-0'>
           <div

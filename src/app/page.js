@@ -4,15 +4,17 @@ import { useRef } from 'react';
 import Header from './Components/Header';
 import AnimatedHero from './Components/Hero';
 import Trevelcard from './Components/Trevelcard';
+import Domtrip from "./Components/Domtrip";
 
 export default function Home() {
   const scrollRef = useRef(null);
 
   return (
     <div>
-      {/* <Header />
-      <AnimatedHero /> */}
+      <Header />
+      <AnimatedHero />
       <Trevelcard />
+      <Domtrip />
     </div>
   );
 }

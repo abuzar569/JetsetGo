@@ -175,30 +175,6 @@ const Banner = () => {
           </div>
         ))}
 
-        {/* Navigation Dots */}
-        {/* <div className="absolute bottom-8 left-8 flex space-x-4">
-          {banners.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => handleSlideChange(index)}
-              className="group relative"
-              aria-label={`Go to slide ${index + 1}`}
-            >
-              <div className={`w-12 h-1 rounded-full transition-all duration-300 
-                ${currentSlide === index ? 'bg-white' : 'bg-white/30 group-hover:bg-white/50'}`}
-              >
-                {currentSlide === index && (
-                  <div 
-                    className="absolute inset-0 bg-white/50 rounded-full"
-                    style={{
-                      animation: 'progress 6s linear forwards'
-                    }}
-                  />
-                )}
-              </div>
-            </button>
-          ))}
-        </div> */}
       </div>
 
       <style jsx>{`

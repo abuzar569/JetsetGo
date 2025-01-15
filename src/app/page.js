@@ -6,6 +6,7 @@ import AnimatedHero from './Components/Hero';
 import Trevelcard from './Components/Trevelcard';
 import Domtrip from "./Components/Domtrip";
 import Banner from "./Components/Banner"
+import ScrollingText from "./Components/ScrollingText";
 
 export default function Home() {
   const scrollRef = useRef(null);
@@ -15,6 +16,7 @@ export default function Home() {
       <Header />
       <AnimatedHero />
       <Trevelcard />
+      <ScrollingText/>
       <Domtrip />
       <Banner />
     </div>

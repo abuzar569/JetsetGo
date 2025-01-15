@@ -8,6 +8,7 @@ import Domtrip from "./Components/Domtrip";
 import Banner from "./Components/Banner"
 import ScrollingText from "./Components/ScrollingText";
 import Testimonials from "./Components/Testimonial";
+import AnimatedFooter from "./Components/AnimatedFooter";
 
 export default function Home() {
   const scrollRef = useRef(null);
@@ -21,6 +22,7 @@ export default function Home() {
       <Domtrip />
       <Banner />
       <Testimonials />
+      <AnimatedFooter />
     </div>
   );
 }

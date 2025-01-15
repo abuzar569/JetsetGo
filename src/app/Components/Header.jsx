@@ -122,7 +122,7 @@ const Header = () => {
 }
 
 const Logo = () => (
-  <div className="bg-primary text-primary-foreground font-bold text-3xl p-2 rounded transition-transform hover:scale-110">
+  <div className="bg-primary text-primary-foreground font-normal text-3xl p-2 rounded transition-transform hover:scale-110">
     Jetset-Go
   </div>
 )

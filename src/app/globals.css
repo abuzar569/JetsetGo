@@ -19,15 +19,13 @@ body {
   background: black;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 .m-scroll {
-  
   display: flex;
   position: relative;
+  /* border: 2px solid red; */
   width: 100%;
-  height: 400px;
+  height: 20vh; /* Height is responsive to the viewport */
   margin: auto;
-  /* background-color: #d34444; */
   overflow: hidden;
   z-index: 1;
 }
@@ -35,14 +33,14 @@ body {
 .m-scroll__title {
   display: flex;
   position: absolute;
-  top: 0;
+  top: 20px;
   left: 0;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
   height: 100%;
   white-space: nowrap;
-  transform: scale(2);
+  transform: scale(1.5); /* Adjust scaling for responsiveness */
   transition: all 1s ease;
 }
 
@@ -53,7 +51,7 @@ body {
 
 .m-scroll__title h1 {
   margin: 0;
-  font-size: 100px;
+  font-size: 8vw; /* Use viewport width for responsive font size */
   color: rgba(255, 255, 255, 1);
   transition: all 2s ease;
 }
@@ -74,5 +72,24 @@ body {
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .m-scroll__title h1 {
+    font-size: 8rem; /* Larger font size for smaller screens */
+  }
+  .m-scroll__title {
+    transform: scale(1.2); /* Adjust scale for smaller devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .m-scroll__title h1 {
+    font-size: 8rem; /* Even larger font size for very small screens */
+  }
+  .m-scroll__title {
+    transform: scale(1); /* No scaling for smallest devices */
   }
 }

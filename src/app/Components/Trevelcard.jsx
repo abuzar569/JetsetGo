@@ -244,7 +244,7 @@ const TravelCard = () => {
   }, []);
 
   return (
-    <div className=" font-League text-white bg-black">
+    <div className=" font-League mb-20 text-white bg-black">
       <div ref={dubaiRef} className="w-11/12 mt-20 mx-auto overflow-hidden">
         <div className='w-full sticky top-0'>
           <div

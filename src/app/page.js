@@ -7,6 +7,7 @@ import Trevelcard from './Components/Trevelcard';
 import Domtrip from "./Components/Domtrip";
 import Banner from "./Components/Banner"
 import ScrollingText from "./Components/ScrollingText";
+import Testimonials from "./Components/Testimonial";
 
 export default function Home() {
   const scrollRef = useRef(null);
@@ -19,6 +20,7 @@ export default function Home() {
       <ScrollingText/>
       <Domtrip />
       <Banner />
+      <Testimonials />
     </div>
   );
 }
